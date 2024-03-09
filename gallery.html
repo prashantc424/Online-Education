@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+	<!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS here -->
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animated-headline.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+	<!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Poppins');
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+body, html{
+  margin: 0;
+  background: #2b2927;
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+  text-align: center;
+  color:white;
+}
+.container-all{
+  width: fit-content;
+  margin: 20px auto;
+  height: auto;
+}
+.container{
+  width: calc(33% - 6px);
+  overflow:hidden;
+  height: fit-content;
+  margin:3px;
+  padding: 0;
+  display:block;
+  position:relative;
+  float:left;
+}
+img{
+  width: 100%;
+  transition-duration: .3s;
+  max-width: 100%;
+  display:block;
+  overflow:hidden;
+  cursor:pointer;
+}
+.title{
+  position:absolute;
+  display:block;
+  cursor:pointer;
+  top: 35%;
+  display: none;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.6em;
+  text-shadow: 1px 5px 10px black;
+  transition-duration: .3s;
+}
+.text{
+  position:absolute;
+  top: 70%;
+  cursor:pointer;
+  max-width: 80%;
+  text-align:center;
+  left: 50%;
+  text-shadow: 1px 5px 10px black;
+  font-size: 1em;
+  display:none;
+  margin-right: -50%;
+  transition-duration: .3s;
+  transform: translate(-50%, -50%) 
+}
+.container:hover img{
+  transform: scale(1.2);
+  transition-duration: .3s;
+  filter: grayscale(50%);
+  opacity: .7;
+}
+.container:hover span{
+  color:white;
+  display: block;
+  transition-duration: .3s;
+}
+@media only screen and (max-width: 900px) {
+    .container {
+        width: calc(50% - 6px);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+}
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #44bb6a;
+}
+
+body {
+  padding-left: 30rem;
+}
+
+section {
+  padding: 3rem 5%;
+}
+
+section:nth-child(even) {
+  background: #f6f6f6;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  font-size: 2rem;
+  color: #44bb6a;
+  text-transform: uppercase;
+}
+
+.heading h3 {
+  padding-top: 1rem;
+  font-size: 3rem;
+  color: #263238;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  color: #fff;
+  background: #263238;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  background: #44bb6a;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #44bb6a;
+  width: 30rem;
+  height: 100%;
+  padding: 3rem;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.header .logo i {
+  color: #ff0;
+}
+
+.header .navbar {
+  padding: 20% 0;
+}
+
+.header .navbar a {
+  display: block;
+  font-size: 2rem;
+  margin: 1.7rem 0;
+  color: #fff;
+}
+
+.header .navbar a i {
+  color: #ff0;
+  padding-right: .5rem;
+}
+
+.header .navbar a:hover {
+  color: #ff0;
+}
+
+.header .navbar a:hover i {
+  padding-right: 2rem;
+}
+
+.header .share {
+  text-align: center;
+}
+
+.header .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.8rem;
+  background: #fff;
+  color: #263238;
+  margin: 0 .1rem;
+}
+
+.header .share a:hover {
+  color: #fff;
+  background: #263238;
+}
+
+.header .credit {
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  padding-top: 15%;
+}
+
+.header .credit span {
+  color: #ff0;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  background: #44bb6a;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10000;
+  display: none;
+}
+
+#menu-btn.fa-times {
+  background: #fff;
+  color: #263238;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.home .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.home .image img {
+  width: 100%;
+}
+
+.home .content {
+  width: 45rem;
+}
+
+.home .content span {
+  color: #44bb6a;
+  font-size: 2rem;
+}
+
+.home .content h3 {
+  color: #263238;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.home .content h3 a {
+  color: #44bb6a;
+}
+
+.home .content h3 a:hover {
+  text-decoration: underline;
+}
+
+.home .content p {
+  font-size: 1.4rem;
+  color: #777;
+  padding-bottom: 1rem;
+  line-height: 2;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-left: 0;
+  }
+  #menu-btn {
+    display: block;
+  }
+  .header {
+    left: -110%;
+  }
+  .header.active {
+    left: 0;
+    -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+    width: 35rem;
+  }
+  .home .content h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .contact .row form .inputBox input {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+</style>
+<body>
+<!-- header section starts  -->
+<div id="menu-btn" class="fas fa-bars"></div>
+<header class="header">
+	<a href="#" class="logo"> <i class="fas fa-graduation-cap"></i> School Management System </a>
+	<nav class="navbar">
+    	<a href="login.html"> <i class="fas fa-angle-right"></i>Login </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Home </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Category </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>About </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Courses </a>
+        <a href="form.html"> <i class="fas fa-angle-right"></i>Apply Online </a>
+        <a href="gallery.html"> <i class="fas fa-angle-right"></i>Gallery </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Pricing </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Contact </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Reviews </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Blogs </a>
+    </nav>
+	<div class="share">
+        <a href="https://www.facebook.com/prashant.chauhan.3766" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/prashantc424" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/prashantc424/" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/prashant-singh-chauhan-1072298a" class="fab fa-linkedin"></a>
+    </div>
+	<p class="credit">created by <span>Mr.Prashant Singh Chauhan</span></p>
+</header>
+<!-- header section ends -->
+<body>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1>Our Gallery Section</h1>
+<div class="container-all">
+<div class="container">
+  <img src="https://bit.ly/2PvlS8Z" alt="">
+   <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2PXNumM" alt="">
+  <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2KbUszm" alt="">
+   <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2FnhYul" alt="">
+   <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2FznWrU" alt="">
+   <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2zd3HLf" alt="">
+   <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2PvlS8Z" alt="">
+   <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2PXNumM" alt="">
+  <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+<div class="container">
+  <img src="https://bit.ly/2KbUszm" alt="">
+   <span class="title">Lorem ipsum dolor</span>
+  <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+</div>
+</div>
+</body>
+</html>

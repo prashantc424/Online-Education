@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+<!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+th{color: white;
+	text-align: left;
+	background-color:#990012;}
+tr:nth-child(even){background-color: #FFE4B5;}
+
+i{ float: right; }
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #44bb6a;
+}
+
+body {
+  padding-left: 30rem;
+}
+
+section {
+  padding: 3rem 5%;
+}
+
+section:nth-child(even) {
+  background: #f6f6f6;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  font-size: 2rem;
+  color: #44bb6a;
+  text-transform: uppercase;
+}
+
+.heading h3 {
+  padding-top: 1rem;
+  font-size: 3rem;
+  color: #263238;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  color: #fff;
+  background: #263238;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  background: #44bb6a;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #44bb6a;
+  width: 30rem;
+  height: 100%;
+  padding: 3rem;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.header .logo i {
+  color: #ff0;
+}
+
+.header .navbar {
+  padding: 20% 0;
+}
+
+.header .navbar a {
+  display: block;
+  font-size: 2rem;
+  margin: 1.7rem 0;
+  color: #fff;
+}
+
+.header .navbar a i {
+  color: #ff0;
+  padding-right: .5rem;
+}
+
+.header .navbar a:hover {
+  color: #ff0;
+}
+
+.header .navbar a:hover i {
+  padding-right: 2rem;
+}
+
+.header .share {
+  text-align: center;
+}
+
+.header .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.8rem;
+  background: #fff;
+  color: #263238;
+  margin: 0 .1rem;
+}
+
+.header .share a:hover {
+  color: #fff;
+  background: #263238;
+}
+
+.header .credit {
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  padding-top: 15%;
+}
+
+.header .credit span {
+  color: #ff0;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  background: #44bb6a;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  z-index: 10000;
+  display: none;
+}
+
+#menu-btn.fa-times {
+  background: #fff;
+  color: #263238;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.home .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.home .image img {
+  width: 100%;
+}
+
+.home .content {
+  width: 45rem;
+}
+
+.home .content span {
+  color: #44bb6a;
+  font-size: 2rem;
+}
+
+.home .content h3 {
+  color: #263238;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.home .content h3 a {
+  color: #44bb6a;
+}
+
+.home .content h3 a:hover {
+  text-decoration: underline;
+}
+
+.home .content p {
+  font-size: 1.4rem;
+  color: #777;
+  padding-bottom: 1rem;
+  line-height: 2;
+}
+
+</style>
+<body>
+    <!-- header section starts  -->
+<div id="menu-btn" class="fas fa-bars"></div>
+<header class="header">
+  <a href="#" class="logo"> <i class="fas fa-graduation-cap"></i> School Management System </a>
+  <nav class="navbar">
+        <a href="login.html"> <i class="fas fa-angle-right"></i>Login </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Home </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Category </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>About </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Courses </a>
+        <a href="form.html"> <i class="fas fa-angle-right"></i>Apply Online </a>
+        <a href="gallery.html"> <i class="fas fa-angle-right"></i>Gallery </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Pricing </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Contact </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Reviews </a>
+        <a href="index.html"> <i class="fas fa-angle-right"></i>Blogs </a>
+    </nav>
+  <div class="share">
+        <a href="https://www.facebook.com/prashant.chauhan.3766" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/prashantc424" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/prashantc424/" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/prashant-singh-chauhan-1072298a" class="fab fa-linkedin"></a>
+    </div>
+  <p class="credit">created by <span>Mr.Prashant Singh Chauhan</span></p>
+</header>
+<!-- header section ends -->
+<body>
+<center><div style="background-color:#990012; color: white;">
+		</div></CENTRE>
+	<caption><center><U><h2>APPLICATION  FORM</h2></U></center></caption>
+	<p align="right"><b>* अनिवार्य फिल्डस (Mandatory fields)</b></p>
+	<table border="1" cellspacing="0" width="100%">
+		<tr><th colspan="2">1.) Registration Details / पंजीकरण के विवरण</th>
+		</tr>
+		<tr><td>1.0)  Whether Applied Previously in CAC Examination <br>/क्या आपने पहले BCCपरीक्षा के लिए आवेदन किया है" *</td>
+			<td><input type="radio" name="yes">No / नहीं
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="yes">Yes / हां</input></td></tr>
+				<tr><td>1.1)  Select Course*</td>
+					<td><select><option>---select---</option>
+						<option>D.C.A</option>
+					<option>A.D.C.A</option>
+				<option>C.F.A</option>
+			<option>D.T.P</option>
+		<option>Web Designing</option>
+		<option>M.S.Office</option>
+		<option>'C' Language</option>
+		<option>Coral Draw</option>
+		<option>Photoshop</option>
+		<option>CCC</option>
+		<option>'O'Level</option>
+		<option>'A'Level</option>
+		<option>PGDCA</option>
+		<option>BCA</option>
+		<option>B.Sc.(IT)</option>
+		<option>B.A.</option>
+		<option>B.Com.</option>
+		<option>B.B.A</option></select></td></tr>
+				<tr><th colspan="2">2.) Applicant's Personal Details /आवेदक का व्यक्तिगत विवरण</th>
+					<tr><td>2.1)  Applicant's Full Name / आवेदक का पूरा नाम *</td>
+						<td><select><option>---select---</option>
+							<option>Mr.</option>
+							<option>Ms.</option>
+							<option>Others</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="name" placeholder="Enter your name here..." size="64%"></input></td></tr>
+							<tr><td>2.2)  Care Of / देखभाल *</td>
+								<td><input type="radio" name="yes">Parents / माता पिता 
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="yes"> Guardian / संरक्षक</input></td></tr>
+				<tr><td>2.2.1)  Father's Name / पिता का नाम *</td>
+					<td><input type="text" name="name" placeholder="Mr." size="80%"></input></td></tr>
+					<tr><td>2.2.2)  Mother's Name / माता का नाम *</td>
+					<td><input type="text" name="name" placeholder="Mrs." size="80%"></input></td></tr>
+					<tr><td>2.3)  Gender / लिंग*</td>
+						<td><input type="radio" name="Gender">Male
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="Gender">Female
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="Gender">Others</input></td></tr>
+				<tr><td>2.4)  Date of Birth / जन्म दिनांक * (dd-Mon-yyyy)</td>
+					<td><input type="date" name="DOB"></input></td></tr>
+					<tr><td>2.5)  Category / वर्ग*</td>
+						<td><select><option>---select---</option>
+							<option>General</option>
+							<option>Scheduled Caste</option>
+							<option>Scheduled Tribe</option>
+							<option>OBC</option></select></td></tr>
+							<tr><td>2.6)  Occupation / व्यवसाय *</td>
+								<td><select><option>---select---</option>
+							<option>Self Employee</option>
+							<option>Government Employee</option>
+							<option>Government Undertaking</option>
+							<option>Others</option></select></td></tr>
+							<tr><td>2.7)  Disability / दिव्यांगता*</td>
+								<td><input type="radio" name="yes">No / नहीं
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="yes">Yes / हां</input></td></tr>
+				<tr><td>2.8)  EWS / आर्थिक रूप से कमजोर वर्ग *</td>
+					<td><input type="radio" name="yes">No / नहीं
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="yes">Yes / हां</input></td></tr>
+				<tr><th colspan="2">3.)  Contact Details / संपर्क विवरण</th></tr>
+				<tr><td>3.1)  Mobile / मोबाइल *</td>
+					<td><input type="phone" name="phone" placeholder="+91" size="30%"></input></td></tr>
+					<tr><td>3.2)  Email / ईमेल पता *</td>
+						<td><input type="Email" name="Email" placeholder="abc@gmail.com" size="40%"></input></td></tr>
+						<tr><th colspan="2">4.)  Address Details / पता विवरण</th></tr>
+						<tr><td>4.1)  Address Line1/पता पंक्ति 1 *</td>
+							<td><input type="text" name="name" size="80%"></input></td></tr>
+							<tr><td>4.2)  Address Line2/पता पंक्ति 2 *</td>
+							<td><input type="text" name="name" size="80%"></input></td></tr>
+							<tr><td>4.3)  Address Line3/पता पंक्ति 3 *</td>
+							<td><input type="text" name="name" size="80%"></input></td></tr>
+							<tr><td>4.4)  City Name / शहर का नाम *</td>
+							<td><input type="text" name="name" size="80%"></input></td></tr>
+							<tr><td>4.5)  State / राज्य *</td>
+								<td><select><option>---Select---</option>
+								<option>Uttar Pradesh</option>
+							<option>Bihar</option>
+							<option>Uttarakhand</option>
+							<option>Delhi</option>
+							<option>Madhya Pradesh</option></select></td></tr>
+							<tr><td>4.6)  District / जिला *</td>
+								<td><select>
+									<option>---Select---</option>
+									<option>Mau</option>
+									<option>Azamgarh</option>
+									<option>Lucknow</option>
+									<option>Ghazipur</option>
+								</select></td></tr>
+								<tr><td>4.7)  Pin Code / पिन कोड *</td>
+									<td><input type="pincode" name="pincode"></input></td></tr>
+									<tr><th colspan="2">5.)  Educational / Qualification Details / शैक्षिक / योग्यता का विवरण</th></tr>
+									<tr><td>5.1)  Highest Educational Qualification / उच्चतम शैक्षिक योग्यता*</td>
+										<td><select><option>---Select---</option>
+											<option>Graduation or Higher</option>
+											<option>Polytechnic Diploma </option>
+											<option>Below 10th</option>
+											<option>10th Pass</option>
+											<option>12th Pass</option>
+											<option>10th + ITI</option>
+											<option>Others</option></select></td></tr>
+											<tr><td>5.2)  Year of Passing / उत्तीर्ण वर्ष *</td>
+												<td><input type="year" name="year"></td></tr>
+												<tr><th colspan="2">6.)  Identification Details / पहचान की सूचना</th></tr>
+												<tr><td>6.1)  Aadhar Card Number / आधार कार्ड संख्या</td>
+													<td><input type="Aadhar Number" name="Aadhar Number" size="50%"></input></td></tr>
+													<tr><td>6.2)  Upload Photo / फोटो अपलोड करें *<br>
+														<input type="file" name="file">
+														<p><font size="2">(Only JPEG/JPG image allowed with the size 5 KB to 50 KB, Dimension should be 132X170 pixels (width 132 pixels & height 170 pixels) and DPI 96 to 300)
+(i) The colour photos taken professionally (not on a mobile phone) during the last six months with white background should be used.
+(ii) The facial features of the person should be clearly visible and no goggles to be used and no part of the face should be covered.</font></p></td>
+<td><div height="50%" width="50%" style="background-color:lightblue; "></div></td></tr>
+<tr><td>6.3)  Upload Signature / हस्ताक्षर अपलोड करें *<br>
+<input type="file" name="file">
+ <p> <font size="2">(Only JPEG/JPG image allowed with the size 5 KB to 20 KB, Dimension should be 170X132 pixels (width 170 pixels & height 132 pixels) and DPI 96 to 200)
+(i) Signature should be taken on white paper using black/blue pen.
+(ii) Image should not be blurred or smudged</font></p></td>
+	<tr><td>6.4)  Upload left thumb impression / बांए हाथ के अंगूठे का निशान अपलोड करें*<br>
+<input type="file" name="file">
+<p> <font size="2">(Only JPEG/JPG image allowed with the size 5 KB to 20 KB, Dimension should be 170X132 pixels (width 170 pixels & height 132 pixels) and DPI 96 to 200)
+(i) Left thumb impression should be taken on white paper using black/blue ink.
+(ii) Image should not be blurred or smudged.</font></p></td></tr>
+ <tr>
+ <td colspan="2"><center>
+ 	<form action="/action_page.php" method="get">
+ 		<button type="submit">Submit</button>
+ 		  <button type="reset" formaction="/action_page2.php">Reset</button>
+  <button type="back" formaction="/action_page2.php">Back</button></center></form></td></tr>
+  </table>
+</body>
+</html>
